@@ -46,9 +46,6 @@ if(news){const viewport=news.querySelector('.news-viewport');const cards=[...new
 const resourceHover=document.querySelector('[data-resource-hover]');
 if(resourceHover){const media=resourceHover.querySelector('.resource-hover-media');const image=media.querySelector('img');resourceHover.querySelectorAll('.resource-list a').forEach(link=>{const show=()=>{image.src=link.dataset.image;media.classList.add('is-visible')};link.addEventListener('mouseenter',show);link.addEventListener('focus',show);link.addEventListener('mouseleave',()=>media.classList.remove('is-visible'));link.addEventListener('blur',()=>media.classList.remove('is-visible'))})}
 
-const supportHover=document.querySelector('[data-support-hover]');
-if(supportHover){const media=supportHover.querySelector('.support-hover-media');const image=media.querySelector('img');supportHover.querySelectorAll('.support-links a').forEach(link=>{const show=()=>{image.src=link.dataset.image;media.classList.add('is-visible')};const hide=()=>media.classList.remove('is-visible');link.addEventListener('mouseenter',show);link.addEventListener('focus',show);link.addEventListener('mouseleave',hide);link.addEventListener('blur',hide)})}
-
 const siteLoader=document.querySelector('.site-loader');
 const revealSite=()=>{document.body.classList.remove('is-loading');siteLoader?.classList.add('is-complete');window.setTimeout(()=>siteLoader?.remove(),500)};
 if(document.readyState==='complete')window.setTimeout(revealSite,450);else window.addEventListener('load',()=>window.setTimeout(revealSite,450),{once:true});

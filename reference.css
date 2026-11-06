@@ -425,17 +425,6 @@ body.is-loading{overflow:hidden}
 .resource-list b{text-align:right;color:#ac2324}
 .resource-list a:hover,.resource-list a:focus-visible{padding-left:18px;background:#162a75;color:#fff;transform:none}
 
-/* Support by need — hover/focus-driven editorial image */
-.support-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(480px,1.1fr);gap:38px;align-items:stretch}
-.support-hover-media{min-height:460px;border-radius:20px;overflow:hidden;background:#dde1e8;opacity:.35;transform:scale(.985);transition:opacity 180ms ease-out,transform 180ms ease-out}
-.support-hover-media.is-visible{opacity:1;transform:none}
-.support-hover-media img{width:100%;height:100%;object-fit:cover}
-.support-links{display:flex;flex-direction:column}
-.support-links a,.support-links a:nth-child(2){flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;margin:0;padding:28px 34px;border-radius:0;border-bottom:2px solid rgba(22,42,117,.18);background:transparent;color:#111827}
-.support-links a:last-child{border-bottom:0}
-.support-links a:hover,.support-links a:focus-visible{padding:28px 34px;background:#162a75;color:#fff;transform:translateX(5px)}
-.support-links a:hover small,.support-links a:focus-visible small{color:#fff}
-
 /* Partner title stays on one line on desktop */
 .partner h2{max-width:none;white-space:nowrap}
 
@@ -450,6 +439,6 @@ body.is-loading{overflow:hidden}
 .contact form button:hover{background:#162a75;transform:translateY(-2px)}
 .form-status{color:#111827}
 
-@media(max-width:900px){.about-body{grid-template-columns:1fr}.about-tabs{display:grid;grid-template-columns:repeat(3,1fr);padding:10px}.about-tabs button{min-height:92px;border-bottom:0;border-right:2px solid #dfe3eb}.about-tabs button:last-child{border-right:0}.resources,.support-body{grid-template-columns:1fr}.resource-hover-media,.support-hover-media{min-height:360px}.partner h2{white-space:normal}}
-@media(max-width:560px){.about-tabs{grid-template-columns:1fr}.about-tabs button{min-height:72px;border-right:0;border-bottom:2px solid #dfe3eb}.resource-list a,.resource-list a:first-child{grid-template-columns:1fr auto;min-height:112px}.resource-list small{grid-column:1}.resource-list b{grid-column:2;grid-row:1/3}.support-hover-media{min-height:270px}.support-links a,.support-links a:nth-child(2),.support-links a:hover,.support-links a:focus-visible{padding:24px 20px}.contact form{padding:28px 20px}.partner h2{white-space:normal}}
-@media(prefers-reduced-motion:reduce){.support-hover-media,.support-links a,.contact form button{transition:none;transform:none!important}}
+@media(max-width:900px){.about-body{grid-template-columns:1fr}.about-tabs{display:grid;grid-template-columns:repeat(3,1fr);padding:10px}.about-tabs button{min-height:92px;border-bottom:0;border-right:2px solid #dfe3eb}.about-tabs button:last-child{border-right:0}.resources{grid-template-columns:1fr}.resource-hover-media{min-height:360px}.partner h2{white-space:normal}}
+@media(max-width:560px){.about-tabs{grid-template-columns:1fr}.about-tabs button{min-height:72px;border-right:0;border-bottom:2px solid #dfe3eb}.resource-list a,.resource-list a:first-child{grid-template-columns:1fr auto;min-height:112px}.resource-list small{grid-column:1}.resource-list b{grid-column:2;grid-row:1/3}.contact form{padding:28px 20px}.partner h2{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.contact form button{transition:none;transform:none!important}}
