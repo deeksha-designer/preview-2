@@ -183,6 +183,8 @@ h1,h2,h3,.button,.primary-nav,.nav-trigger{font-family:AISINDisplay,AISINArial,A
 .product-story p{font-size:17px;line-height:1.5;color:#eef2f9;max-width:35ch;margin-top:16px}
 .product-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-self:end}
 .product-actions .button{width:100%;min-width:0;min-height:50px;border-radius:999px}
+.product-actions{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap}
+.product-actions .button{width:auto;min-width:180px}
 .product-visual{grid-column:2;grid-row:2;width:100%;height:540px;min-height:540px;border-radius:18px;overflow:hidden;background:#e9edf3}
 .product-visual img{width:100%;height:100%;object-fit:cover;transition:transform 180ms ease-out,opacity 160ms ease-out}
 .product-visual:hover img{transform:scale(1.025)}
