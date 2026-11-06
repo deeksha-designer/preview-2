@@ -325,3 +325,76 @@ h1,h2,h3,.button,.primary-nav,.nav-trigger{font-family:AISINDisplay,AISINArial,A
 .launch-paths>a:last-child{background:#eef0f4;color:#111827}
 .launch-paths>a:last-child strong,.launch-paths>a:last-child small{color:#111827}
 .contact-copy h2{max-width:11ch}
+
+/* Final AISIN ASK brand system */
+:root{--blue:#162a75;--blue-2:#162a75;--ref-blue:#162a75;--ref-navy:#162a75;--red:#ac2324;--section-wash:linear-gradient(359deg,#ebebeb,#00000000)}
+.product-intro h2,.range-heading h2,.about-heading h2,.resource-head h2,.audience-routes h2,.news-heading h2,.contact-copy h2{color:#162a75}
+.header-cta,.product-content,.partner,.contact form,.news-controls button{background:#162a75}
+.header-cta:hover,.about-tabs button[aria-selected=true],.range-list article:hover a,.contact form button{background:#ac2324}
+.product-tabs button.is-active{color:#162a75}
+.product-actions .button:first-child,.about-tabs button[aria-selected=true],.about-tabs button[aria-selected=true]:hover{background:#ac2324}
+.about-facts{background:#162a75}
+.range-list article h3,.range-list article:nth-child(4) h3,.range-list article a{color:#162a75}
+.audience-routes a:hover,.audience-routes a:focus-visible{background:#162a75}
+.audience-routes a:focus-visible{outline-color:#ac2324}
+
+/* Requested soft tonal wash across homepage chapters */
+main>section:not(.hero):not(.partner){background:linear-gradient(359deg,#ebebeb,#00000000)}
+
+/* Centered chapter introductions */
+.product-intro,.range-heading,.about-heading,.resource-head{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0}
+.product-intro h2,.range-heading h2,.about-heading h2,.resource-head h2{max-width:100%;margin-left:auto;margin-right:auto}
+.product-intro p,.about-heading p,.resource-head p{max-width:56ch;margin:22px auto 0;text-align:center}
+.range-heading{margin-bottom:56px}
+.audience-routes{display:block}
+.audience-routes header{position:static;text-align:center;max-width:760px;margin:0 auto 50px}
+.audience-routes h2,.contact-copy h2{margin-left:auto;margin-right:auto;text-align:center}
+.audience-routes header p,.contact-copy p{text-align:center;margin-left:auto;margin-right:auto}
+.news-heading{position:relative;justify-content:center;text-align:center}
+.news-heading>a{position:absolute;right:0;bottom:7px}
+
+/* Why AISIN ASK — complete left-tab rhythm */
+.about-tabs{gap:0}
+.about-tabs button{border-radius:0;border-bottom:2px solid rgba(22,42,117,.18)}
+.about-tabs button:last-child{border-bottom:0}
+
+/* Range updates — requested spacing and white final card */
+.launch-band>div{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.launch-paths>a:last-child{background:#fff;color:#111827}
+.launch-paths>a:last-child strong,.launch-paths>a:last-child small{color:#111827}
+
+/* Technical resources — image-led reference library */
+.resources{display:grid;grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);grid-template-rows:auto auto;gap:54px 32px}
+.resource-head{grid-column:1/-1;margin-bottom:0}
+.resource-hover-media{grid-column:1;grid-row:2;min-height:520px;height:100%;border-radius:22px;background:#162a75;overflow:hidden}
+.resource-hover-media img{width:100%;height:100%;object-fit:cover}
+.resource-list{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:stretch}
+.resource-list a,.resource-list a:first-child{min-height:165px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:26px;border-radius:16px;background:#fff;color:#111827}
+.resource-list span{font-size:22px;color:#162a75}
+.resource-list small{margin-top:auto;color:#4b5563}
+.resource-list b{margin-top:6px;color:#ac2324}
+.resource-list a:hover,.resource-list a:focus-visible{background:#162a75;color:#fff;transform:translateY(-5px)}
+.resource-list a:hover span,.resource-list a:focus-visible span,.resource-list a:hover small,.resource-list a:focus-visible small,.resource-list a:hover b,.resource-list a:focus-visible b{color:#fff}
+
+/* Centered conversion chapter */
+.partner{min-height:460px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px var(--content-gutter);background:#162a75}
+.partner>div:not(.partner-ring){display:flex;flex-direction:column;align-items:center}
+.partner h2{max-width:14ch;margin:0 auto;color:#fff}
+.partner p{max-width:48ch;margin:24px auto 0}
+.partner>.button{margin:34px auto 0;background:#fff;color:#162a75}
+
+/* Branded loading reveal */
+.site-loader{position:fixed;z-index:1000;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;background:#fff;opacity:1;transition:opacity 420ms ease-out,visibility 420ms ease-out}
+.site-loader img{width:min(260px,55vw);height:auto;background:transparent}
+.site-loader span{width:110px;height:4px;overflow:hidden;background:#e2e5ec;position:relative}
+.site-loader span:after{content:"";position:absolute;inset:0;background:#ac2324;transform:translateX(-100%);animation:loaderProgress 900ms ease-in-out infinite}
+.site-loader.is-complete{opacity:0;visibility:hidden;pointer-events:none}
+body.is-loading{overflow:hidden}
+@keyframes loaderProgress{to{transform:translateX(100%)}}
+
+/* Detailed footer in approved brand blue */
+.footer{position:relative;margin-top:0;padding:0 var(--ref-edge) 30px;background:linear-gradient(180deg,#242d4e 0%,#152354 34%,#162a75 74%);color:#fff;border-top:8px solid #ac2324}
+
+@media(max-width:900px){.resources{grid-template-columns:1fr;grid-template-rows:auto 360px auto}.resource-head,.resource-hover-media,.resource-list{grid-column:1}.resource-hover-media{grid-row:2;min-height:360px}.resource-list{grid-row:3}.partner{padding-top:88px;padding-bottom:88px}}
+@media(max-width:560px){.launch-band>div,.resource-list{grid-template-columns:1fr}.resource-hover-media{min-height:280px}.resource-list a,.resource-list a:first-child{min-height:135px}.partner{padding:72px 20px}.site-loader img{width:min(220px,62vw)}.news-heading>a{position:static;display:inline-flex;margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.site-loader{transition:none}.site-loader span:after{animation:none;transform:none}.motion-ready .section-reveal,.motion-ready .section-reveal.is-visible{transition:none;transform:none;opacity:1}}
