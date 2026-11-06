@@ -277,3 +277,18 @@ h1,h2,h3,.button,.primary-nav,.nav-trigger{font-family:AISINDisplay,AISINArial,A
 .audience-routes a,.audience-routes a:nth-child(2){padding:34px 28px;margin-bottom:24px;background:#0d2148;border:0}
 
 @media(max-width:560px){.hero h1,.product-intro h2,.product-story h3,.range-heading h2,.about-heading h2,.launch-copy h2,.resource-head h2,.audience-routes h2,.news-heading h2,.partner h2,.contact-copy h2,.footer-cta h2{font-size:40px}.product-content .product-story .product-actions{gap:8px;padding-top:32px}.audience-routes a,.audience-routes a:nth-child(2){padding:28px 22px;margin-bottom:16px}}
+
+/* Support routes: high-contrast resting and interaction states */
+.audience-routes a,
+.audience-routes a:nth-child(2){background:#eef0f4;color:#111827}
+.audience-routes a>small{color:#4b5563}
+.audience-routes a:hover,
+.audience-routes a:focus-visible{background:var(--ref-blue);color:#fff}
+.audience-routes a:hover>small,
+.audience-routes a:focus-visible>small{color:#fff}
+.audience-routes a:focus-visible{outline:3px solid #be1e2d;outline-offset:3px}
+
+/* Keep this editorial title equal to the homepage heading system */
+.news-heading h2{font-size:56px;line-height:1.04;max-width:none;white-space:nowrap}
+@media(max-width:900px){.news-heading h2{font-size:46px}}
+@media(max-width:560px){.news-heading h2{font-size:40px}}
