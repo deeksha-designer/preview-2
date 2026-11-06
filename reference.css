@@ -312,3 +312,8 @@ h1,h2,h3,.button,.primary-nav,.nav-trigger{font-family:AISINDisplay,AISINArial,A
 .launch-paths>a,.audience-routes a,.news-card,.resource-list a,.partner .button{background:#fff;transition:transform 180ms ease-out,opacity 180ms ease-out,background-color 180ms ease-out,color 180ms ease-out}
 
 @media(max-width:560px){.news-viewport{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 48px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 48px),transparent 100%)}.news-controls{margin-top:24px}}
+
+/* Requested field balance: soft-grey support, white news, tonal story cards */
+.audience-routes{background:linear-gradient(180deg,#f7f8fa 0%,#eceff3 100%)}
+.updates{background:#fff}
+.news-card{background:linear-gradient(180deg,#f8f9fb 0%,#eceff3 100%)}
