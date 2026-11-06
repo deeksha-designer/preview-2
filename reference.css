@@ -398,3 +398,58 @@ body.is-loading{overflow:hidden}
 @media(max-width:900px){.resources{grid-template-columns:1fr;grid-template-rows:auto 360px auto}.resource-head,.resource-hover-media,.resource-list{grid-column:1}.resource-hover-media{grid-row:2;min-height:360px}.resource-list{grid-row:3}.partner{padding-top:88px;padding-bottom:88px}}
 @media(max-width:560px){.launch-band>div,.resource-list{grid-template-columns:1fr}.resource-hover-media{min-height:280px}.resource-list a,.resource-list a:first-child{min-height:135px}.partner{padding:72px 20px}.site-loader img{width:min(220px,62vw)}.news-heading>a{position:static;display:inline-flex;margin-top:18px}}
 @media(prefers-reduced-motion:reduce){.site-loader{transition:none}.site-loader span:after{animation:none;transform:none}.motion-ready .section-reveal,.motion-ready .section-reveal.is-visible{transition:none;transform:none;opacity:1}}
+
+/* Client-specified sizing */
+.news-card>div{height:170px;background:#fff}
+.hero{height:570px;min-height:80vh;max-height:570px}
+.range-list{width:100%;max-width:var(--content-max);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:30px;margin:0 auto}
+
+/* Why AISIN ASK — stronger vertical story selector */
+.about-body{grid-template-columns:310px minmax(0,1fr);gap:24px}
+.about-tabs{padding:16px;background:#fff;border-radius:18px;overflow:hidden}
+.about-tabs button{position:relative;min-height:108px;padding:26px 52px 26px 26px;border:0;border-bottom:2px solid #dfe3eb;background:transparent;color:#172033;font-size:18px;font-weight:700;transform:none}
+.about-tabs button:last-child{border-bottom:0}
+.about-tabs button:after{content:"→";position:absolute;right:24px;top:50%;transform:translateY(-50%);color:#ac2324;font-size:22px}
+.about-tabs button:hover{background:#eef0f5;color:#162a75;transform:none}
+.about-tabs button[aria-selected=true],.about-tabs button[aria-selected=true]:hover{background:#162a75;color:#fff;transform:none;border-bottom-color:#162a75}
+.about-tabs button[aria-selected=true]:after{color:#fff}
+
+/* Technical resources — one clean editorial index, not a box grid */
+.resources{grid-template-columns:minmax(360px,.78fr) minmax(0,1.22fr);gap:54px 56px}
+.resource-hover-media{min-height:540px;border-radius:20px}
+.resource-list{display:flex;flex-direction:column;gap:0;background:transparent}
+.resource-list a,.resource-list a:first-child{min-height:88px;display:grid;grid-template-columns:minmax(0,1fr) 190px 90px;align-items:center;gap:20px;padding:20px 4px;border-radius:0;border-bottom:2px solid rgba(22,42,117,.18);background:transparent;color:#111827}
+.resource-list a:last-child{border-bottom:0}
+.resource-list span{font-size:21px;color:#162a75}
+.resource-list small,.resource-list b{margin:0}
+.resource-list b{text-align:right;color:#ac2324}
+.resource-list a:hover,.resource-list a:focus-visible{padding-left:18px;background:#162a75;color:#fff;transform:none}
+
+/* Support by need — hover/focus-driven editorial image */
+.support-body{display:grid;grid-template-columns:minmax(0,.9fr) minmax(480px,1.1fr);gap:38px;align-items:stretch}
+.support-hover-media{min-height:460px;border-radius:20px;overflow:hidden;background:#dde1e8;opacity:.35;transform:scale(.985);transition:opacity 180ms ease-out,transform 180ms ease-out}
+.support-hover-media.is-visible{opacity:1;transform:none}
+.support-hover-media img{width:100%;height:100%;object-fit:cover}
+.support-links{display:flex;flex-direction:column}
+.support-links a,.support-links a:nth-child(2){flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;margin:0;padding:28px 34px;border-radius:0;border-bottom:2px solid rgba(22,42,117,.18);background:transparent;color:#111827}
+.support-links a:last-child{border-bottom:0}
+.support-links a:hover,.support-links a:focus-visible{padding:28px 34px;background:#162a75;color:#fff;transform:translateX(5px)}
+.support-links a:hover small,.support-links a:focus-visible small{color:#fff}
+
+/* Partner title stays on one line on desktop */
+.partner h2{max-width:none;white-space:nowrap}
+
+/* Contact — lighter, clearer enquiry form */
+.contact{align-items:center}
+.contact form{padding:46px;border-radius:22px;background:#fff;color:#111827;gap:24px 20px}
+.contact label{font-size:15px;color:#162a75}
+.contact input,.contact select{min-height:58px;margin-top:10px;border:2px solid transparent;border-radius:10px;background:#eef0f4;color:#111827;padding:0 18px;transition:border-color 160ms ease-out,background-color 160ms ease-out}
+.contact input:hover,.contact select:hover{background:#e6e9ef}
+.contact input:focus,.contact select:focus{outline:0;border-color:#162a75;background:#fff}
+.contact form button{min-height:58px;border-radius:999px;background:#ac2324;color:#fff;font-size:16px;transition:transform 160ms ease-out,background-color 160ms ease-out}
+.contact form button:hover{background:#162a75;transform:translateY(-2px)}
+.form-status{color:#111827}
+
+@media(max-width:900px){.about-body{grid-template-columns:1fr}.about-tabs{display:grid;grid-template-columns:repeat(3,1fr);padding:10px}.about-tabs button{min-height:92px;border-bottom:0;border-right:2px solid #dfe3eb}.about-tabs button:last-child{border-right:0}.resources,.support-body{grid-template-columns:1fr}.resource-hover-media,.support-hover-media{min-height:360px}.partner h2{white-space:normal}}
+@media(max-width:560px){.about-tabs{grid-template-columns:1fr}.about-tabs button{min-height:72px;border-right:0;border-bottom:2px solid #dfe3eb}.resource-list a,.resource-list a:first-child{grid-template-columns:1fr auto;min-height:112px}.resource-list small{grid-column:1}.resource-list b{grid-column:2;grid-row:1/3}.support-hover-media{min-height:270px}.support-links a,.support-links a:nth-child(2),.support-links a:hover,.support-links a:focus-visible{padding:24px 20px}.contact form{padding:28px 20px}.partner h2{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.support-hover-media,.support-links a,.contact form button{transition:none;transform:none!important}}
