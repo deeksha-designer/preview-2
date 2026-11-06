@@ -304,3 +304,11 @@ h1,h2,h3,.button,.primary-nav,.nav-trigger{font-family:AISINDisplay,AISINArial,A
 
 @media(max-width:900px){.product-showcase,.range-index,.brand-proof,.launch-band,.resources,.audience-routes,.updates,.partner,.contact{padding-top:88px;padding-bottom:88px}}
 @media(max-width:560px){.product-showcase,.range-index,.brand-proof,.launch-band,.resources,.audience-routes,.updates,.partner,.contact{padding-top:72px;padding-bottom:72px}.news-heading{align-items:flex-start}}
+
+/* News slider: restrained edge fade and controls inside the 1500px frame */
+.news-viewport{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 110px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 110px),transparent 100%)}
+.news-controls{position:static;display:flex;justify-content:flex-end;width:100%;max-width:var(--content-max);margin:32px auto 0;padding:0}
+
+.launch-paths>a,.audience-routes a,.news-card,.resource-list a,.partner .button{background:#fff;transition:transform 180ms ease-out,opacity 180ms ease-out,background-color 180ms ease-out,color 180ms ease-out}
+
+@media(max-width:560px){.news-viewport{-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 48px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 48px),transparent 100%)}.news-controls{margin-top:24px}}
